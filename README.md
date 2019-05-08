@@ -27,20 +27,20 @@
 #### 实验过程：
 
 ###### 1、实现控件和窗口的自适应
-1)、定义Viewbox，Stretch="Fill"。
-2)、由于Viewbox只能有一个子对象，所以定义一个Canvas将所有内容包含在内。
+###### 1)、定义Viewbox，Stretch="Fill"。
+###### 2)、由于Viewbox只能有一个子对象，所以定义一个Canvas将所有内容包含在内。
 ###### 2、实现列表点击播放
-1)、添加一个ListBox。
-2)、编辑ListBox_SelectionChanged（选择项改变）事件，当选中音乐时，载入并播放此音乐。
-3)、使用在open之前先调用stop方法避免死锁。
+###### 1)、添加一个ListBox。
+###### 2)、编辑ListBox_SelectionChanged（选择项改变）事件，当选中音乐时，载入并播放此音乐。
+###### 3)、使用在open之前先调用stop方法避免死锁。
 ###### 3、实现播放模式选择
-1)、添加3个RadioButton。
-2)、定义play_method属性用于储存播放模式。
-3)、3个RadioButton公用RadioButton_Checked事件，默认为顺序播放，当选择某个模式时，play_method随之改变。
+###### 1)、添加3个RadioButton。
+###### 2)、定义play_method属性用于储存播放模式。
+###### 3)、3个RadioButton公用RadioButton_Checked事件，默认为顺序播放，当选择某个模式时，play_method随之改变。
 ###### 4、实现多种播放模式
-1)、定义当前播放的音乐及其索引。
-2)、在HandlePlayingComplete事件中调用play，使用Dispatcher.BeginInvoke异步调用play。
-3)、创建play函数，判断播放模式。对于循环播放，即播放列表中下一首；对于随机播放，使用随机数选择音乐；对于单曲循环，即重新播放当前音乐。
+###### 1)、定义当前播放的音乐及其索引。
+###### 2)、在HandlePlayingComplete事件中调用play，使用Dispatcher.BeginInvoke异步调用play。
+###### 3)、创建play函数，判断播放模式。对于循环播放，即播放列表中下一首；对于随机播放，使用随机数选择音乐；对于单曲循环，即重新播放当前音乐。
 #### 实验结果：
 ###### 1、刚打开程序时
 ![](https://github.com/cxdzb/Lab3/blob/master/Images/2.png?raw=true)
